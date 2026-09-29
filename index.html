@@ -7,7 +7,7 @@
 <template id="__bundler_thumbnail" data-bg-color="#02071D">
 <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
 <rect width="1200" height="800" fill="#02071D"/>
-<circle cx="600" cy="380" r="140" fill="none" stroke="#C93143" stroke-width="10"/>
+<circle cx="600" cy="380" r="140" fill="none" stroke="#DB143E" stroke-width="10"/>
 <text x="600" y="400" font-family="sans-serif" font-size="60" font-weight="700" fill="#FFFFFF" text-anchor="middle">ICI</text>
 </svg>
 </template>
@@ -51,6 +51,7 @@
 <meta name="ext-resource-dependency" content="./sponsor-3.png" data-resource-id="sponsor3" />
 <meta name="ext-resource-dependency" content="./sponsor-4.png" data-resource-id="sponsor4" />
 <meta name="ext-resource-dependency" content="./sponsor-5.png" data-resource-id="sponsor5" />
+<meta name="ext-resource-dependency" content="./why-ici-bg.png" data-resource-id="whyIciBg" />
 </head>
 <body>
 <x-dc>
@@ -59,8 +60,8 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@300;500&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#FFFFFF;font-family:"Helvetica Neue",Arial,sans-serif}
-a{color:#C93143;text-decoration:none}
-a:hover{color:#A32538}
+a{color:#DB143E;text-decoration:none}
+a:hover{color:#B01032}
 *{box-sizing:border-box}
 @keyframes om-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 [data-arrow-btn]:hover [data-arrow-tail]{width:11px!important}
@@ -68,30 +69,114 @@ a:hover{color:#A32538}
 ::-webkit-scrollbar{display:none;width:0;height:0}
 [data-hscroll]::-webkit-scrollbar{display:none;width:0;height:0}
 nav::-webkit-scrollbar{display:none;width:0;height:0}
+[data-m-only]{display:none}
+@media (max-width:768px){
+  [data-m-hide]{display:none!important}
+  [data-m-only]{display:flex!important}
+  body{padding-bottom:64px}
+  [data-m-header]{min-height:0!important;padding-left:20px!important;padding-right:20px!important;grid-template-columns:auto 1fr!important}
+  [data-m-tabs]{left:0!important;right:0!important}
+  [data-m-burger]{margin-right:-10px}
+  [data-m-logo] img{height:calc(var(--lh) * .8)!important}
+  [data-m-herobox]{background:transparent!important;width:auto!important;padding:0!important;border-radius:0!important}
+  [data-m-band]{margin-left:-20px!important;margin-right:-20px!important;padding-left:20px!important;padding-right:20px!important}
+  [data-m-hcap]{font-size:11px!important;padding:6px 12px!important;margin-top:4px;margin-bottom:16px!important;gap:6px!important;flex-wrap:wrap}
+  [data-m-band]{font-size:10px!important;letter-spacing:.1em!important;padding-top:8px!important;padding-bottom:8px!important;margin-bottom:14px!important;flex-wrap:wrap;gap:8px 12px!important}
+  [data-m-band] span{font-size:10px!important}
+  [data-m-h1]{margin-bottom:14px!important}
+  [data-m-whyov]{opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,.3))!important}
+  [data-m-h1a]{font-size:42px!important;line-height:1.05!important}
+  [data-m-h1b]{font-size:18px!important;margin-top:8px!important}
+  [data-m-hp]{font-size:12px!important;line-height:1.5!important;margin-bottom:20px!important}
+  [data-m-hctas]{flex-direction:column;gap:10px!important;margin-bottom:22px!important}
+  [data-m-hctas]>a{width:100%;height:44px!important;font-size:15px!important}
+  [data-m-hsub]{width:100%!important;padding-top:16px!important}
+  [data-m-hpills]{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px!important}
+  [data-m-hpills]>span{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:13px!important;line-height:1.25;padding:10px 8px!important;border-radius:10px!important;min-height:58px;box-sizing:border-box}
+  [data-m-br]{display:block}
+  [data-m-bannerwrap]{border-top:none!important}
+  [data-m-herovid]{opacity:.5}
+  [data-m-credit]{margin-top:10px}
+  [data-m-flip]{transform:scaleY(-1)}
+  [data-m-sec][data-m-footer]{padding-top:20px!important;padding-bottom:96px!important}
+  [data-m-footlogo]{margin-top:0!important;display:block}
+  [data-m-head]{flex-wrap:nowrap!important;align-items:flex-start!important;gap:12px!important;text-align:left}
+  [data-m-head]>:first-child{flex:1 1 auto;min-width:0}
+  [data-m-head]>a{flex-shrink:0;height:30px!important;font-size:12px!important;padding:0 12px!important}
+  p,[data-m-eyebrow]{font-size:12px!important}
+  [data-m-banner]{aspect-ratio:1672/470!important}
+  [data-m-bannerin]{padding:0 20px!important;gap:4px!important}
+  [data-m-bannerin]>div:first-child{font-size:10px!important}
+  [data-m-bannerin]>div:nth-child(2){font-size:16px!important}
+  [data-m-bannerin]>a{height:28px!important;font-size:12px!important;padding:0 16px!important;margin-top:4px!important}
+  [data-m-sec]{padding:56px 20px!important}
+  [data-m-sec] h2,[data-m-why] h2,[data-m-prog] h2,[data-m-whocard] h2{font-size:26px!important}
+  [data-m-bell]{padding:10px 20px!important;justify-content:space-between!important;gap:12px!important;font-size:12px!important}
+  [data-m-bellmsg]{width:auto!important;flex-shrink:1!important;min-width:0}
+  [data-m-bellmsg] span{white-space:normal!important;line-height:1.3!important}
+  [data-m-info]{grid-template-columns:1fr 1fr!important;padding:8px 12px!important}
+  [data-m-info]>div{padding:10px 8px!important;border-right:none!important;gap:10px!important}
+  [data-m-info]>div>span{width:32px!important;height:32px!important}
+  [data-m-info]>div>div>div:first-child{font-size:13px!important}
+  [data-m-info]>div>div>div:last-child{font-size:11px!important}
+  [data-m-why]{padding:64px 20px 36px!important}
+  [data-m-stats]{grid-template-columns:1fr 1fr!important;gap:24px 16px!important;margin-bottom:32px!important}
+  [data-m-stats]>div>div:first-child{font-size:32px!important}
+  [data-m-whyicons]{display:flex!important;flex-wrap:wrap;justify-content:center;gap:10px!important}
+  [data-m-whyicons]>div{padding:18px 8px!important;flex:0 0 calc((100% - 20px) / 3);box-sizing:border-box}
+  [data-m-whyicons]>div>div{font-size:10px!important}
+  [data-m-evwrap]{padding:0 20px 110px!important}
+  [data-m-car]{display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;gap:12px!important;scrollbar-width:none;margin-left:-20px!important;margin-right:-20px!important;padding-left:20px!important;padding-right:20px!important;scroll-padding:0 20px;max-width:none!important;align-items:flex-start;margin-bottom:0!important}
+  [data-m-car]::-webkit-scrollbar{display:none}
+  [data-m-car]>*{flex:0 0 82%!important;scroll-snap-align:start;min-width:0}
+  [data-m-pad20]{padding:0 20px!important}
+  [data-m-whocard]{padding:28px 16px 24px!important}
+  [data-m-whotabs]{grid-template-columns:1fr 1fr!important;row-gap:20px}
+  [data-m-whotabs]>button{border-right:none!important;padding:0 8px!important}
+  [data-m-whotabs] img{width:56px!important;height:56px!important}
+  [data-m-whotabs] div{font-size:13px!important}
+  [data-m-prog]{padding:110px 20px 56px!important}
+  [data-m-daytabs]>button{flex:1;padding:0 6px!important}
+  [data-m-subs]{grid-template-columns:minmax(0,1fr)!important;gap:20px!important}
+  [data-m-subs]>h2{white-space:normal!important}
+  [data-m-subs]>div:nth-child(2){display:none}
+  [data-m-partners] image-slot{width:180px!important;height:76px!important}
+  [data-m-filters]{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;margin-left:-20px;margin-right:-20px;padding:0 20px}
+  [data-m-filters]>button{flex-shrink:0}
+  [data-m-full]{width:100%!important;height:44px!important}
+  [data-m-foot]{grid-template-columns:1fr 1fr!important;gap:28px 20px!important;margin-bottom:32px!important}
+  [data-m-foot]>:first-child{grid-column:1/-1}
+  [data-m-hero]{height:calc(100vh - 76px - 56px);height:calc(100svh - 76px - 56px);box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:44px 20px 20px!important}
+  [data-m-tabs]>*{flex:1 1 0;min-width:0}
+  [data-m-tabs]>a,[data-m-tabs]>div>div:first-child{border-radius:0!important}
+  [data-m-tabs]>a{justify-content:center;padding:10px 4px!important;letter-spacing:.04em!important;font-size:10px!important}
+  [data-m-tabs]>div{position:static!important}
+  [data-m-tabs]>div>div:first-child{padding:10px 4px!important;text-align:center}
+  [data-m-tabs]>div>div:first-child>div{letter-spacing:.04em!important;font-size:10px!important}
+  [data-m-tabs]>div>div:last-child{left:0!important;right:0!important;width:auto!important;border-radius:8px!important;transform:none!important;transition:opacity .35s ease!important}
+}
 </style>
 <script src="./image-slot.js"></script>
 </helmet>
 
-<div style="position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;border-radius:0 8px 8px 0;overflow:hidden;opacity:{{ showSocialRail }};pointer-events:{{ railPointerEvents }};transition:opacity .7s ease">
-    <sc-for list="{{ signupTabs }}" as="tab" hint-placeholder-count="3">
-      <div style="display:flex;align-items:stretch;height:140px" onMouseEnter="{{ tab.onEnter }}" onMouseLeave="{{ tab.onLeave }}">
-        <div style="width:36px;height:100%;flex-shrink:0;position:relative;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;padding-left:4px;background:{{ tab.bg }};transition:background .3s ease">
-          <div style="writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;font-size:8.64px;font-weight:800;letter-spacing:.08em;color:{{ tab.labelColor }};transition:color .2s ease">{{ tab.label }}</div>
-        </div>
-        <div style="width:{{ tab.panelWidth }};background:{{ tab.bg }};opacity:{{ tab.panelOpacity }};overflow-x:hidden;overflow-y:visible;transition:width .3s ease,background .3s ease,opacity .25s ease .3s;padding-right:{{ tab.panelPadRight }};padding-left:10px;display:flex;flex-direction:column;padding-top:8px;border-radius:0 10px 10px 0">
-          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:700;color:#FFFFFF;white-space:nowrap">{{ tab.title }}</div>
-          <p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.45;color:#C9CCD6;margin:10px 0 0;width:200px">{{ tab.copy }}</p>
-          <a href="#" style="background:#C93143;color:#FFFFFF;font-size:12px;font-weight:700;padding:0 16px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;height:29px;box-sizing:border-box;white-space:nowrap;margin-top:10px;width:fit-content;opacity:{{ tab.panelOpacity }};transition:opacity .25s ease" style-hover="background:#A32538">Sign Up Now</a>
-        </div>
-      </div>
-    </sc-for>
+
+
+  <sc-if value="{{ isMobilePreview }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:1000;background:#E4E5EA;display:flex;justify-content:center;align-items:flex-start;padding:24px 0;overflow:auto">
+    <iframe src="ICI Homepage.dc.html?frame=1" title="Mobile preview" style="width:390px;height:calc(100vh - 48px);border:0;border-radius:24px;background:#FFFFFF;box-shadow:0 0 40px rgba(2,7,29,.25);flex-shrink:0"></iframe>
   </div>
-
-
+</sc-if>
+<div style="min-height:100vh">
   <div style="background:#FFFFFF;color:#0B0F1F;min-height:100vh;overflow-x:clip">
 
+  <!-- Mobile pinned contact bar -->
+  <div data-m-only="" style="position:fixed;left:0;right:0;bottom:0;z-index:200;gap:0;height:56px">
+    <a href="tel:+972558852803" aria-label="Call" style="flex:1;display:flex;align-items:center;justify-content:center;background:#DB143E" style-active="background:#B01032"><img src="icon-mbar-phone.svg" alt="" style="width:33px;height:33px;display:block"></a>
+    <a href="mailto:info@ici-conference.com" aria-label="Email" style="flex:1;display:flex;align-items:center;justify-content:center;background:#01278C" style-active="background:#011C66"><img src="icon-mbar-email.svg" alt="" style="width:33px;height:33px;display:block"></a>
+  </div>
+
   <!-- Utility bar -->
-  <div style="background:linear-gradient(90deg,#050B24,#0F1F44);color:#C9CCD6;font-size:13px;padding:9px 48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+  <div data-m-hide="" style="background:#01278C;color:#C9CCD6;font-size:13px;padding:9px 48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
     <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap">
       <span style="display:flex;align-items:center;gap:8px"><img src="icon-social-email.svg" style="width:14px;height:14px" alt="">info@ici-conference.com</span>
       <span style="display:flex;align-items:center;gap:8px"><img src="icon-social-mobile.svg" style="width:14px;height:14px" alt="">+972 55 885 2803</span>
@@ -100,15 +185,15 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
   <!-- Sticky header -->
-  <div style="position:sticky;top:0;z-index:100;background:#FFFFFF;border-bottom:1px solid #E4E5EA;min-height:76px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;padding:{{ headerPadY }} 48px;transition:padding .4s ease">
-    <img src="logo-navy.svg" alt="ICI logo" style="height:{{ headerLogoHeight }};width:auto;flex-shrink:0;justify-self:start;transition:height .4s ease">
-    <div style="position:relative;min-width:0;justify-self:center;max-width:100%">
+  <div data-m-header="" style="position:sticky;top:0;z-index:100;background:#FFFFFF;border-bottom:1px solid #E4E5EA;min-height:76px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;padding:{{ headerPadY }} 48px;transition:padding .4s ease">
+    <a href="#" data-m-logo="" style="position:relative;display:block;justify-self:start;flex-shrink:0;--lh:{{ headerLogoHeight }};--h:0;transform:scale(calc(1 + var(--h) * .03));transform-origin:left center;transition:transform .3s ease" style-hover="--h:1"><img src="logo-navy.svg" alt="ICI logo" style="display:block;height:var(--lh);width:auto;transition:height .4s ease"><img src="logo-red.svg" alt="" style="position:absolute;inset:0;display:block;height:var(--lh);width:auto;opacity:var(--h);transition:height .4s ease,opacity .3s ease"></a>
+    <div data-m-hide="" style="position:relative;min-width:0;justify-self:center;max-width:100%">
     <nav ref="{{ navScrollRef }}" onScroll="{{ onNavScroll }}" style="display:flex;flex-wrap:nowrap;gap:10px;align-items:center;max-width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;padding:26px 0">
       <sc-for list="{{ navLinks }}" as="item" hint-placeholder-count="6">
         <div style="position:relative;--show:0" style-hover="--show:1" onMouseEnter="{{ item.onHoverIn }}" onMouseLeave="{{ item.onHoverOut }}">
-          <a href="#" style="position:relative;color:#0B0F1F;font-family:'Inter',sans-serif;font-size:{{ navFontSize }};font-weight:500;display:flex;align-items:center;gap:4px;flex-shrink:0;white-space:nowrap;transition:font-size .4s ease;--underline:0" style-hover="--underline:1">{{ item.label }}<sc-if value="{{ item.caret }}" hint-placeholder-val="{{ false }}"><span style="border-left:3px solid transparent;border-right:3px solid transparent;border-top:4px solid #5B6070;display:inline-block"></span></sc-if>
+          <a href="#" style="position:relative;color:#01278C;font-family:'Inter',sans-serif;font-size:{{ navFontSize }};font-weight:600;display:flex;align-items:center;gap:4px;flex-shrink:0;white-space:nowrap;transition:font-size .4s ease;--underline:0" style-hover="--underline:1">{{ item.label }}<sc-if value="{{ item.caret }}" hint-placeholder-val="{{ false }}"><span style="border-left:3px solid transparent;border-right:3px solid transparent;border-top:4px solid #01278C;display:inline-block"></span></sc-if>
             <sc-if value="{{ item.noCaret }}" hint-placeholder-val="{{ false }}">
-              <span style="position:absolute;left:0;bottom:-6px;width:100%;height:1px;background:#12295E;transform:scaleX(var(--underline,0));transform-origin:left;transition:transform .6s ease"></span>
+              <span style="position:absolute;left:0;bottom:-6px;width:100%;height:1px;background:#01278C;transform:scaleX(var(--underline,0));transform-origin:left;transition:transform .6s ease"></span>
             </sc-if>
           </a>
         </div>
@@ -121,47 +206,94 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
       <div style="position:fixed;left:{{ activeSubmenuLeft }}px;top:{{ activeSubmenuTop }}px;transform:translateX(-50%);width:max-content;min-width:180px;background:#FFFFFF;border-radius:8px;z-index:200;box-shadow:0 12px 32px rgba(11,15,31,.15);overflow:hidden" onMouseEnter="{{ onSubmenuHoverIn }}" onMouseLeave="{{ onSubmenuHoverOut }}">
         <div style="padding:8px 0">
           <sc-for list="{{ activeSubmenuItems }}" as="s" hint-placeholder-count="2">
-            <a href="#" style="display:block;padding:10px 24px;font-size:13px;color:#0B0F1F;font-weight:500;white-space:nowrap" style-hover="background:#F5F6F9;color:#C93143">{{ s }}</a>
+            <a href="#" style="display:block;padding:10px 24px;font-size:13px;color:#01278C;font-weight:500;white-space:nowrap" style-hover="background:#F5F6F9;color:#DB143E">{{ s }}</a>
           </sc-for>
         </div>
       </div>
     </sc-if>
-    <a href="#" data-arrow-btn="" style="background:#C93143;color:#FFFFFF;font-size:13px;font-weight:600;padding:9px 16px;border-radius:5px;flex-shrink:0;white-space:nowrap;justify-self:end;display:inline-flex;align-items:center;gap:5px" style-hover="background:#A32538">Register Now<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+    <a href="#" data-arrow-btn="" data-m-hide="" style="background:#DB143E;color:#FFFFFF;font-size:13px;font-weight:600;padding:9px 16px;border-radius:5px;flex-shrink:0;white-space:nowrap;justify-self:end;display:inline-flex;align-items:center;gap:5px" style-hover="background:#B01032">Register Now<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+    <button data-m-only="" data-m-burger="" onClick="{{ toggleMobileMenu }}" aria-label="Menu" style="justify-self:end;width:44px;height:44px;border:none;background:transparent;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0">
+      <span style="display:block;width:24px;height:2px;background:#01278C;border-radius:1px;transition:transform .3s ease;transform:{{ burgerTop }}"></span>
+      <span style="display:block;width:24px;height:2px;background:#01278C;border-radius:1px;transition:opacity .2s ease;opacity:{{ burgerMidOpacity }}"></span>
+      <span style="display:block;width:24px;height:2px;background:#01278C;border-radius:1px;transition:transform .3s ease;transform:{{ burgerBottom }}"></span>
+    </button>
+    <sc-if value="{{ mobileMenuOpen }}" hint-placeholder-val="{{ false }}">
+      <div data-m-only="" onClick="{{ toggleMobileMenu }}" style="position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.8)"></div>
+      <div data-m-only="" style="position:fixed;top:0;right:0;width:80vw;height:100vh;z-index:301;background:#FFFFFF;flex-direction:column;overflow-y:auto;padding:0 0 24px">
+        <div style="display:flex;justify-content:flex-end;padding:0 10px 4px;margin-top:{{ closeBtnTop }}">
+          <button onClick="{{ toggleMobileMenu }}" aria-label="Close menu" style="width:44px;height:44px;border:none;background:transparent;cursor:pointer;position:relative">
+            <span style="position:absolute;top:21px;left:10px;width:24px;height:2px;background:#01278C;border-radius:1px;transform:rotate(45deg)"></span>
+            <span style="position:absolute;top:21px;left:10px;width:24px;height:2px;background:#01278C;border-radius:1px;transform:rotate(-45deg)"></span>
+          </button>
+        </div>
+        <sc-for list="{{ mobileNav }}" as="m" hint-placeholder-count="6">
+          <div style="border-bottom:1px solid #F0F1F4">
+            <button onClick="{{ m.onToggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:#01278C;text-align:left">
+              <span>{{ m.label }}</span>
+              <sc-if value="{{ m.hasSub }}" hint-placeholder-val="{{ false }}"><span style="border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #01278C;display:inline-block;transition:transform .25s ease;transform:{{ m.caretRotate }}"></span></sc-if>
+            </button>
+            <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;padding:0 0 10px;background:#F5F6F8">
+                <sc-for list="{{ m.sub }}" as="s" hint-placeholder-count="2">
+                  <a href="#" style="padding:7px 32px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#0B0F1F" style-active="color:#DB143E">{{ s }}</a>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <div data-m-tabs="" style="position:absolute;top:calc(100% + 2px);right:48px;display:flex;gap:2px;z-index:101">
+      <a href="#" data-m-only="" style="background:#DB143E;border-radius:0 0 6px 6px;padding:8px 14px;align-items:center;white-space:nowrap;font-size:11px;font-weight:800;letter-spacing:.08em;line-height:1;color:#FFFFFF" style-active="background:#B01032">REGISTER</a>
+      <sc-for list="{{ signupTabs }}" as="tab" hint-placeholder-count="3">
+        <div style="position:relative" onMouseEnter="{{ tab.onEnter }}" onMouseLeave="{{ tab.onLeave }}">
+          <div style="background:{{ tab.bg }};border-radius:0 0 6px 6px;padding:8px 14px;cursor:pointer;transition:background .3s ease">
+            <div style="white-space:nowrap;font-size:11px;font-weight:800;letter-spacing:.08em;line-height:1;color:{{ tab.labelColor }};transition:color .2s ease">{{ tab.label }}</div>
+          </div>
+          <div style="position:absolute;top:100%;right:0;margin-top:2px;width:260px;background:rgba(2,7,29,.97);border-radius:8px 0 8px 8px;padding:16px 18px 18px;opacity:{{ tab.panelOpacity }};pointer-events:{{ tab.panelPointer }};transform:translateY({{ tab.panelShift }});transition:opacity .3s ease,transform .3s ease">
+            <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:700;color:#FFFFFF;white-space:nowrap">{{ tab.title }}</div>
+            <p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.45;color:#C9CCD6;margin:10px 0 0">{{ tab.copy }}</p>
+            <a href="#" style="background:#DB143E;color:#FFFFFF;font-size:12px;font-weight:700;padding:0 16px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;height:29px;box-sizing:border-box;white-space:nowrap;margin-top:12px" style-hover="background:#B01032">Sign Up Now</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
   </div>
 
   <!-- Hero -->
-  <div style="position:relative;background:#02071D;color:#FFFFFF;padding:30px 48px 40px;overflow:hidden">
-    <div style="position:absolute;inset:0;opacity:.5">
+  <div data-m-hero="" style="position:relative;background:#02071D;color:#FFFFFF;padding:30px 48px 40px;overflow:hidden">
+    <div data-m-herovid="" style="position:absolute;inset:0;opacity:.8">
       <video src="hero-video.mp4" poster="hero-snapshot.png" autoplay="" muted="" loop="" playsinline="" style="width:100%;height:100%;object-fit:cover"></video>
     </div>
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,7,29,0) 0%,rgba(2,7,29,0) 60%,rgba(2,7,29,0) 100%)"></div>
-    <div style="position: relative; max-width: 100%; margin: 0 auto 0 0; border-radius: 5px; padding: 32px; width: 587px; background-color: #02071D66">
-      <div style="display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:8px 16px;border-radius:100px;color:#C9CCD6;font-size:13px;font-weight:500;margin-bottom:28px">
+    <div data-m-only="" style="position:absolute;inset:0;background-color:#02071D66;pointer-events:none"></div>
+    <div data-m-herobox="" style="position: relative; max-width: 100%; margin: 0 auto 0 0; border-radius: 5px; padding: 32px; width: 587px; background-color: #02071D66">
+      <div data-m-hcap="" style="display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:8px 16px;border-radius:100px;color:#C9CCD6;font-size:13px;font-weight:500;margin-bottom:28px">
         <span>David InterContinental Hotel · Tel Aviv</span><span style="opacity:.5">·</span><span>December 8–10, 2026</span>
       </div>
-      <div style="display: block; width: fit-content; font-size: 12px; font-weight: 800; letter-spacing: .14em; color: #C93143; margin-bottom: 16px">ICI 2026 — ISRAEL CARDIOLOGY INNOVATIONS CONFERENCE</div>
-      <h1 style="font-family:'IBM Plex Sans',sans-serif;font-weight:700;margin:0 0 24px;max-width:760px">
-        <span style="font-size:79.2px;line-height:1.1;display:block">Cardiology<br>Innovation.</span>
-        <span style="font-size:35.84px;line-height:1.1;display:block;margin-top:12px">The Future of Cardiac Care.</span>
+      <div data-m-band="" style="display:block;font-size:12px;font-weight:800;letter-spacing:.14em;color:#DB143E;margin:0 -32px 16px;padding:10px 32px;background:rgba(0,0,0,.25)">ICI 2026 — ISRAEL CARDIOLOGY INNOVATIONS CONFERENCE</div>
+      <h1 data-m-h1="" style="font-family:'IBM Plex Sans',sans-serif;font-weight:700;margin:0 0 24px;max-width:760px">
+        <span data-m-h1a="" style="font-size:79.2px;line-height:1.1;display:block">Cardiology<br>Innovation.</span>
+        <span data-m-h1b="" style="font-size:35.84px;line-height:1.1;display:block;margin-top:12px">The Future of Cardiac Care.</span>
       </h1>
-      <p style="font-size: 18px; line-height: 1.6; color: #FFFFFF; max-width: 600px; margin: 0 0 36px; font-weight: 500">
+      <p data-m-hp="" style="font-size: 18px; line-height: 1.6; color: #FFFFFF; max-width: 600px; margin: 0 0 36px; font-weight: 500">
         Israel's leading conference on cardiology innovation. Top speakers, groundbreaking research, and the national startup competition.
       </p>
-      <div style="display:flex;gap:16px;margin-bottom:40px;flex-wrap:wrap">
-        <a href="#" data-arrow-btn="" style="background:#C93143;color:#FFFFFF;font-size:16px;font-weight:600;padding:0 30px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#A32538">Register for the Conference<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
-        <a href="#" style="background:transparent;color:#FFFFFF;font-size:16px;font-weight:600;padding:0 30px;border-radius:5px;border:1px solid rgba(255,255,255,.3);display:inline-flex;align-items:center;justify-content:center;height:33px;box-sizing:border-box" style-hover="border-color:#FFFFFF;background:#FFFFFF;color:#12295E">View Program</a>
+      <div data-m-hctas="" style="display:flex;gap:16px;margin-bottom:40px;flex-wrap:wrap">
+        <a href="#" data-arrow-btn="" style="background:#DB143E;color:#FFFFFF;font-size:16px;font-weight:600;padding:0 30px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#B01032">Register for the Conference<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+        <a href="#" style="background:transparent;color:#FFFFFF;font-size:16px;font-weight:600;padding:0 30px;border-radius:5px;border:1px solid rgba(255,255,255,.3);display:inline-flex;align-items:center;justify-content:center;height:33px;box-sizing:border-box" style-hover="border-color:#FFFFFF;background:#FFFFFF;color:#01278C">View Program</a>
       </div>
-      <div style="width:fit-content;border-top:1px solid rgba(255,255,255,.15);padding-top:28px">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;color:#C93143">SUBMISSIONS</span>
+      <div data-m-hsub="" style="width:fit-content;border-top:1px solid rgba(255,255,255,.15);padding-top:28px">
+        <div data-m-band="" style="display:flex;align-items:center;gap:14px;margin:0 -32px 18px;padding:10px 32px;background:rgba(0,0,0,.25)">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;color:#DB143E">SUBMISSIONS</span>
           <span style="display:flex;align-items:center;gap:6px;color:#FF6B85;font-size:13px;font-weight:600">
-            <span style="width:14px;height:14px;border-radius:50%;background:#C93143;color:#FFFFFF;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700">!</span>
+            <span style="width:14px;height:14px;border-radius:50%;background:#DB143E;color:#FFFFFF;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:700">!</span>
             DEADLINE: OCT 1, 2026
           </span>
         </div>
-        <div style="display:flex;gap:14px;flex-wrap:nowrap">
+        <div data-m-hpills="" style="display:flex;gap:14px;flex-wrap:nowrap">
           <sc-for list="{{ submissionPills }}" as="p" hint-placeholder-count="3">
-            <span style="border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#FFFFFF;font-size:14px;font-weight:500;padding:11px 20px;border-radius:100px;cursor:pointer" style-hover="background:#FFFFFF;color:#12295E">{{ p }}</span>
+            <span style="border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#FFFFFF;font-size:14px;font-weight:500;padding:11px 20px;border-radius:100px;cursor:pointer" style-hover="background:#FFFFFF;color:#01278C">{{ p.l1 }} <span data-m-br="">{{ p.l2 }}</span></span>
           </sc-for>
         </div>
       </div>
@@ -169,26 +301,21 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
   <!-- Big promotional banner carousel -->
-  <div ref="{{ bannerRef }}" style="position:relative;width:100%;overflow:hidden">
-    <sc-for list="{{ bannerSlides }}" as="slide" hint-placeholder-count="4">
-      <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slide.style }}">
+  <div ref="{{ bannerRef }}" data-m-bannerwrap="" style="position:relative;width:100%;overflow:hidden;border-top:2px solid #DB143E">
+    <sc-for list="{{ bannerSlides }}" as="slide" hint-placeholder-count="3">
+      <div data-m-banner="" style="{{ slide.style }}">
+        <div data-m-bannerin="" style="max-width:1200px;height:100%;margin:0 auto;padding:0 48px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;color:#FFFFFF;box-sizing:border-box">
+          <div style="font-size:12px;font-weight:800;letter-spacing:.14em;color:#DB143E">{{ slide.kicker }}</div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:30px;font-weight:700;line-height:1.15">{{ slide.title }}</div>
+          <a href="#" style="margin-top:6px;background:#DB143E;color:#FFFFFF;font-size:14px;font-weight:700;padding:0 22px;border-radius:5px;display:inline-flex;align-items:center;height:33px" style-hover="background:#B01032">CTA</a>
+        </div>
+      </div>
     </sc-for>
   </div>
 
-  <!-- Sticky promo / bell bar: hidden until the banner above scrolls out of view, then pinned under the header -->
-  <sc-if value="{{ showBellBar }}" hint-placeholder-val="{{ false }}">
-    <div style="position:sticky;top:{{ promoBarTop }};z-index:99;background:#02071D;color:#FFFFFF;padding:19.5px 48px;display:flex;align-items:center;justify-content:center;gap:32px;font-size:14px;font-weight:500;transition:top .25s ease">
-      <div id="bell-bar-msg" style="display:flex;align-items:center;gap:12px;width:290px;flex-shrink:0;line-height:1;transform:translateY(8px)">
-        <img src="{{ bellBarIcon }}" style="width:18px;height:18px;flex-shrink:0;display:block" alt="">
-        <span style="color:#FFFFFF;white-space:nowrap;line-height:1">{{ bellBarMessage }}</span>
-      </div>
-      <a href="#" data-arrow-btn="" style="background:transparent;color:#FFFFFF;font-weight:700;font-size:13px;line-height:1;padding:7px 16px;border-radius:5px;border:1px solid #FFFFFF;display:flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap;transform:translateY(8px);height:33px;box-sizing:border-box" style-hover="background:#FFFFFF;color:#12295E;border-color:#FFFFFF">Apply Now<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
-    </div>
-  </sc-if>
-
   <!-- Information stripe (floats over hero/section boundary) -->
   <div style="position:relative;z-index:2;background:#FFFFFF;box-shadow:0 20px 50px rgba(2,7,29,.18)">
-    <div style="max-width:1200px;margin:0 auto;padding:17px 40px;display:grid;grid-template-columns:repeat(4,1fr)">
+    <div data-m-info="" style="max-width:1200px;margin:0 auto;padding:17px 40px;display:grid;grid-template-columns:repeat(4,1fr)">
       <div style="display:flex;gap:14px;align-items:center;padding:0 24px;border-right:1px solid #E4E5EA">
         <span style="width:40px;height:40px;border-radius:8px;background:rgba(219,21,62,.08);flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="icon-calendar.svg" style="width:18px;height:18px" alt=""></span>
         <div>
@@ -220,13 +347,18 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
     </div>
   </div>
 
+  <div id="why-ici-wrap" style="position:relative;isolation:isolate;background-color:#01278C">
+    <div style="position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none">
+      <video data-m-flip="" src="why-ici-bg.mp4" autoplay="" muted="" loop="" playsinline="" style="position:absolute;top:0;left:0;width:100%;height:{{ whyBgHeight }};object-fit:cover;object-position:center top"></video>
+      <div data-m-whyov="" style="position:absolute;inset:0;background:rgba(0,0,0,.2)"></div>
+    </div>
   <!-- Why ICI -->
-  <div style="background:#02071D;color:#FFFFFF;padding:120px 48px 64px;text-align:center">
+  <div data-m-why="" style="color:#FFFFFF;padding:120px 48px 64px;text-align:center">
     <div style="max-width:1200px;margin:0 auto">
       <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:36px;font-weight:700;margin:0 0 10px">Why ICI?</h2>
-      <div style="color:#C93143;font-size:16px;font-weight:600;margin-bottom:48px">31 Years of Shaping Cardiovascular Medicine</div>
+      <div style="color:#DB143E;font-size:16px;font-weight:600;margin-bottom:48px">31 Years of Shaping Cardiovascular Medicine</div>
 
-      <div ref="{{ statsRef }}" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:48px">
+      <div ref="{{ statsRef }}" data-m-stats="" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:48px">
         <sc-for list="{{ stats }}" as="stat" hint-placeholder-count="4">
           <div>
             <div style="font-size:42px;font-weight:700;font-family:'IBM Plex Sans',sans-serif">{{ stat.n }}</div>
@@ -235,21 +367,21 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
         </sc-for>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+      <div data-m-whyicons="" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
         <div style="border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px 16px">
-          <img src="icon-medical-box.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(29%) sepia(64%) saturate(3000%) hue-rotate(335deg) brightness(90%) contrast(95%);" alt="">
+          <img src="icon-medical-box.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(5000%) hue-rotate(340deg) brightness(92%) contrast(98%);" alt="">
           <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#C9CCD6">Leading Medical Companies</div>
         </div>
         <div style="border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px 16px">
-          <img src="icon-heart.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(29%) sepia(64%) saturate(3000%) hue-rotate(335deg) brightness(90%) contrast(95%);" alt="">
+          <img src="icon-heart.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(5000%) hue-rotate(340deg) brightness(92%) contrast(98%);" alt="">
           <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#C9CCD6">Live Cases</div>
         </div>
         <div style="border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px 16px">
-          <img src="icon-protection.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(29%) sepia(64%) saturate(3000%) hue-rotate(335deg) brightness(90%) contrast(95%);" alt="">
+          <img src="icon-protection.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(5000%) hue-rotate(340deg) brightness(92%) contrast(98%);" alt="">
           <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#C9CCD6">Digital Health</div>
         </div>
         <div style="border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px 16px">
-          <img src="icon-ai.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(29%) sepia(64%) saturate(3000%) hue-rotate(335deg) brightness(90%) contrast(95%);" alt="">
+          <img src="icon-ai.svg" style="width:32px;height:32px;display:block;margin:0 auto 14px;filter:brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(5000%) hue-rotate(340deg) brightness(92%) contrast(98%);" alt="">
           <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#C9CCD6">AI</div>
         </div>
         <div style="border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px 16px">
@@ -261,8 +393,8 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
   <!-- Sub-events -->
-  <div style="background:#02071D;padding:0 48px 136px">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start">
+  <div data-m-evwrap="" style="padding:0 48px 136px">
+    <div data-m-car="" data-carousel="ev" onScroll="{{ onCarouselScroll }}" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start">
       <sc-for list="{{ subEvents }}" as="ev" hint-placeholder-count="3">
         <div onMouseEnter="{{ ev.onEnter }}" onMouseLeave="{{ ev.onLeave }}" style="{{ ev.cardStyle }}">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
@@ -276,15 +408,20 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
         </div>
       </sc-for>
     </div>
+      <div data-m-only="" style="justify-content:center;align-items:center;gap:8px;margin-top:10px">
+        <button onClick="{{ carPrev.ev }}" aria-label="Previous" style="border:none;background:transparent;color:#FFFFFF;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid currentColor"></span><span style="width:10px;height:1px;background:currentColor"></span></button>
+        <div style="display:flex;gap:8px"><sc-for list="{{ dots.ev }}" as="d" hint-placeholder-count="3"><span style="width:7px;height:7px;border-radius:50%;background:{{ d.bg }};transition:background .2s ease"></span></sc-for></div>
+        <button onClick="{{ carNext.ev }}" aria-label="Next" style="border:none;background:transparent;color:#FFFFFF;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:10px;height:1px;background:currentColor"></span><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid currentColor"></span></button>
+      </div>
   </div>
 
   <!-- Who Is It For -->
   <div style="position:relative;z-index:2;margin-top:-64px;margin-bottom:-64px">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,#02071D 0%,#02071D 50%,#F5F6F8 50%,#F5F6F8 100%);z-index:0"></div>
-    <div style="position:relative;z-index:1;padding:0 48px">
-    <div style="max-width:1200px;margin:0 auto;background:#FFFFFF;border-radius:12px;box-shadow:0 24px 30px rgba(2,7,29,.176);padding:48px 40px 44px">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 50%,#F5F6F8 50%,#F5F6F8 100%);z-index:0"></div>
+    <div data-m-pad20="" style="position:relative;z-index:1;padding:0 48px">
+    <div data-m-whocard="" style="max-width:1200px;margin:0 auto;background:#FFFFFF;border-radius:12px;box-shadow:0 24px 30px rgba(2,7,29,.176);padding:48px 40px 44px">
       <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:30px;font-weight:700;margin:0 0 32px;text-align:center">Who Is It For?</h2>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+      <div data-m-whotabs="" style="display:grid;grid-template-columns:repeat(4,1fr)">
         <sc-for list="{{ audienceTabs }}" as="t" hint-placeholder-count="4">
           <button onClick="{{ t.onClick }}" onMouseEnter="{{ t.onClick }}" style="{{ t.buttonStyle }}">
             <img src="{{ t.icon }}" style="width:80px;height:80px;display:block;margin:0 auto 12px" alt="">
@@ -299,18 +436,20 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
     </div>
   </div>
 
+  </div>
+
   <!-- Program -->
-  <div style="background:#F5F6F8;padding:136px 48px 100px">
+  <div data-m-prog="" style="background:#F5F6F8;padding:136px 48px 100px">
     <div style="max-width:1200px;margin:0 auto">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px">
+      <div data-m-head="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px">
         <div>
-          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C93143;margin-bottom:12px">— Conference Program</div>
+          <div data-m-eyebrow="" style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#DB143E;margin-bottom:12px">— Conference Program</div>
           <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:34px;font-weight:700;margin:0">Daily Highlights</h2>
         </div>
-        <a href="#" data-arrow-btn="" style="background:transparent;color:#12295E;font-size:13px;font-weight:700;padding:0 16px;border-radius:5px;border:1px solid #12295E;display:inline-flex;align-items:center;justify-content:center;gap:5px;line-height:1;height:33px;box-sizing:border-box;flex-shrink:0" style-hover="background:#12295E;color:#FFFFFF;border-color:#12295E">View Full Schedule<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+        <a href="#" data-arrow-btn="" style="background:transparent;color:#01278C;font-size:13px;font-weight:700;padding:0 16px;border-radius:5px;border:1px solid #01278C;display:inline-flex;align-items:center;justify-content:center;gap:5px;line-height:1;height:33px;box-sizing:border-box;flex-shrink:0" style-hover="background:#01278C;color:#FFFFFF;border-color:#01278C"><span data-m-hide="">View </span>Full Schedule<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
       </div>
 
-      <div style="display:flex;gap:10px;margin-bottom:32px">
+      <div data-m-daytabs="" style="display:flex;gap:10px;margin-bottom:32px">
         <sc-for list="{{ scheduleDayTabs }}" as="dt" hint-placeholder-count="3">
           <button onClick="{{ dt.onClick }}" style="border:1px solid {{ dt.border }};background:{{ dt.bg }};color:{{ dt.color }};font-size:13px;font-weight:600;padding:0 18px;border-radius:100px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;height:44px;box-sizing:border-box;transition:background .2s ease,color .2s ease">
             <span>{{ dt.label }}</span>
@@ -319,7 +458,7 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
         </sc-for>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:40px;align-items:start">
+      <div data-m-car="" data-carousel="sch" onScroll="{{ onCarouselScroll }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:40px;align-items:start">
         <sc-for list="{{ schedule }}" as="slot" hint-placeholder-count="4">
           <div onMouseEnter="{{ slot.onEnter }}" onMouseLeave="{{ slot.onLeave }}" style="height:230px;perspective:1200px">
             <div style="{{ slot.flipStyle }}">
@@ -331,11 +470,11 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
                 <span style="background:rgba(2,7,29,.06);color:#02071D;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 11px;border-radius:100px;display:inline-block;margin-top:10px">{{ slot.tag }}</span>
                 <div style="font-size:16px;font-weight:600;margin:14px 0 8px;line-height:1.35">{{ slot.title }}</div>
                 <div style="font-size:13px;color:#5B6070">{{ slot.people }}</div>
-                <div style="margin-top:auto;padding-top:10px;color:#C93143;font-size:13px;font-weight:700;display:flex;align-items:center;gap:5px">Register Now →</div>
+                <div style="margin-top:auto;padding-top:10px;color:#DB143E;font-size:13px;font-weight:700;display:flex;align-items:center;gap:5px">Register Now →</div>
               </div>
               <div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateX(180deg);background:#02071D;border-radius:8px;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center">
                 <div style="position:relative">
-                  <a href="#" onMouseEnter="{{ slot.regBtnOnEnter }}" onMouseLeave="{{ slot.regBtnOnLeave }}" style="background:#C93143;color:#FFFFFF;font-size:14px;font-weight:700;padding:0 26px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;height:33px;box-sizing:border-box" style-hover="background:#FFFFFF;color:#02071D">Register Now</a>
+                  <a href="#" onMouseEnter="{{ slot.regBtnOnEnter }}" onMouseLeave="{{ slot.regBtnOnLeave }}" style="background:#DB143E;color:#FFFFFF;font-size:14px;font-weight:700;padding:0 26px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;height:33px;box-sizing:border-box" style-hover="background:#FFFFFF;color:#02071D">Register Now</a>
                   <div style="{{ slot.secureSpotStyle }}">Secure your spot</div>
                 </div>
               </div>
@@ -343,21 +482,26 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
           </div>
         </sc-for>
       </div>
+      <div data-m-only="" style="justify-content:center;align-items:center;gap:8px;margin-top:10px">
+        <button onClick="{{ carPrev.sch }}" aria-label="Previous" style="border:none;background:transparent;color:#0B0F1F;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid currentColor"></span><span style="width:10px;height:1px;background:currentColor"></span></button>
+        <div style="display:flex;gap:8px"><sc-for list="{{ dots.sch }}" as="d" hint-placeholder-count="3"><span style="width:7px;height:7px;border-radius:50%;background:{{ d.bg }};transition:background .2s ease"></span></sc-for></div>
+        <button onClick="{{ carNext.sch }}" aria-label="Next" style="border:none;background:transparent;color:#0B0F1F;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:10px;height:1px;background:currentColor"></span><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid currentColor"></span></button>
+      </div>
     </div>
   </div>
 
   <!-- Speakers -->
-  <div style="background:#02071D;color:#FFFFFF;padding:100px 48px">
+  <div data-m-sec="" style="background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.8)),url(speakers-bg.png) center/cover no-repeat,#01278C;color:#FFFFFF;padding:100px 48px">
     <div style="max-width:1200px;margin:0 auto">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
+      <div data-m-head="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
         <div>
-          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C93143;margin-bottom:12px">— Speakers</div>
+          <div data-m-eyebrow="" style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#DB143E;margin-bottom:12px">— Speakers</div>
           <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:34px;font-weight:700;margin:0">Senior Speakers &amp; Experts</h2>
         </div>
-        <a href="#" data-arrow-btn="" style="background:transparent;color:#FFFFFF;font-size:14px;font-weight:600;padding:0 21px;border-radius:5px;border:1px solid #FFFFFF;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#FFFFFF;color:#12295E">All Speakers<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+        <a href="#" data-arrow-btn="" style="background:transparent;color:#FFFFFF;font-size:14px;font-weight:600;padding:0 21px;border-radius:5px;border:1px solid #FFFFFF;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#FFFFFF;color:#01278C">All Speakers<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
       </div>
 
-      <div ref="{{ speakersRef }}" data-hscroll="" style="display:flex;gap:36px;overflow-x:auto;scroll-behavior:smooth;padding-bottom:8px;scrollbar-width:none;-ms-overflow-style:none">
+      <div ref="{{ speakersRef }}" data-hscroll="" data-m-car="" data-carousel="sp" onScroll="{{ onCarouselScroll }}" style="display:flex;gap:36px;overflow-x:auto;scroll-behavior:smooth;padding-bottom:8px;scrollbar-width:none;-ms-overflow-style:none">
         <sc-for list="{{ speakers }}" as="sp" hint-placeholder-count="4">
           <a href="#" target="_blank" onMouseEnter="{{ sp.onEnter }}" onMouseLeave="{{ sp.onLeave }}" style="flex:0 0 260px;display:flex;flex-direction:column;color:inherit">
             <div style="width:100%;aspect-ratio:1;margin-bottom:16px;perspective:1200px">
@@ -365,23 +509,28 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
                 <div style="position:absolute;inset:0;backface-visibility:hidden">
                   <image-slot id="{{ sp.slotId }}" src="{{ sp.photo }}" style="width:100%;height:100%" shape="rounded" radius="8" placeholder="400 × 400 px"></image-slot>
                 </div>
-                <div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateX(180deg);background:#0F1F44;border-radius:8px;padding:20px;display:flex;align-items:center;justify-content:center">
+                <div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateX(180deg);background:linear-gradient(rgba(0,0,0,.95),rgba(0,0,0,.95)),url(speaker-back-bg.png) left center/cover no-repeat,#0F1F44;border-radius:8px;padding:20px;display:flex;align-items:center;justify-content:center">
                   <p style="font-family:'Inter',sans-serif;font-weight:300;font-size:13px;line-height:1.7;color:#C9CCD6;margin:0;text-align:center">{{ sp.bio }}</p>
                 </div>
               </div>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:4px">{{ sp.name }}</div>
-            <div style="font-size:14px;color:#C93143;margin-bottom:2px">{{ sp.role }}</div>
+            <div style="font-size:14px;font-weight:500;color:#DB143E;margin-bottom:2px">{{ sp.role }}</div>
             <div style="font-size:14px;color:#C9CCD6;margin-bottom:14px">{{ sp.country }}</div>
             <span style="{{ sp.profileStyle }}">View Profile</span>
           </a>
         </sc-for>
       </div>
 
-      <div style="display:flex;justify-content:center;align-items:center;gap:24px;margin-top:32px">
+      <div data-m-only="" style="justify-content:center;align-items:center;gap:8px;margin-top:10px">
+        <button onClick="{{ carPrev.sp }}" aria-label="Previous" style="border:none;background:transparent;color:#FFFFFF;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid currentColor"></span><span style="width:10px;height:1px;background:currentColor"></span></button>
+        <div style="display:flex;gap:8px"><sc-for list="{{ dots.sp }}" as="d" hint-placeholder-count="3"><span style="width:7px;height:7px;border-radius:50%;background:{{ d.bg }};transition:background .2s ease"></span></sc-for></div>
+        <button onClick="{{ carNext.sp }}" aria-label="Next" style="border:none;background:transparent;color:#FFFFFF;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:10px;height:1px;background:currentColor"></span><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid currentColor"></span></button>
+      </div>
+      <div data-m-hide="" style="display:flex;justify-content:center;align-items:center;gap:24px;margin-top:32px">
         <button onClick="{{ scrollLeftFn(speakersRef) }}" style="border:none;background:transparent;color:#FFFFFF;font-size:18px;cursor:pointer;padding:6px;display:inline-flex"><span data-carousel-arrow="" style="display:inline-flex;align-items:center"><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-right:5px solid currentColor"></span><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span></span></button>
         <div style="display:flex;gap:8px">
-          <span style="width:7px;height:7px;border-radius:50%;background:#C93143"></span>
+          <span style="width:7px;height:7px;border-radius:50%;background:#DB143E"></span>
           <span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.3)"></span>
           <span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.3)"></span>
         </div>
@@ -391,31 +540,36 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
   <!-- Open Submissions -->
-  <div style="background:#F5F6F8;padding:100px 48px">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:auto 1px 1fr;gap:32px;align-items:stretch">
+  <div data-m-sec="" style="background:#F5F6F8;padding:100px 48px">
+    <div data-m-subs="" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:auto 1px 1fr;gap:32px;align-items:stretch">
       <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;font-weight:700;margin:0;align-self:center;white-space:nowrap">Open Submissions</h2>
       <div style="background:#DDDFE3"></div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div data-m-car="" data-carousel="subs" onScroll="{{ onCarouselScroll }}" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
         <sc-for list="{{ submissions }}" as="sub" hint-placeholder-count="3">
           <div onMouseEnter="{{ sub.onEnter }}" onMouseLeave="{{ sub.onLeave }}" style="{{ sub.cardStyle }};display:flex;flex-direction:column">
-            <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C93143;margin-bottom:14px">{{ sub.kicker }}</div>
+            <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#DB143E;margin-bottom:14px">{{ sub.kicker }}</div>
             <div style="font-size:19px;font-weight:600;margin-bottom:14px;min-height:52px">{{ sub.title }}</div>
             <div style="margin-top:auto">
               <div style="font-size:13px;color:{{ sub.deadlineColor }};font-weight:600;margin-bottom:20px">Deadline: {{ sub.deadline }}</div>
-              <a href="#" data-arrow-btn="" style="font-size:14px;font-weight:600;color:{{ sub.submitColor }};display:inline-flex;align-items:center;gap:5px;border:1px solid transparent;border-radius:5px;padding:6px 12px;margin:-6px -12px;transition:border-color .2s ease,color .2s ease" style-hover="background:#C93143;border-color:#C93143;color:#FFFFFF">Submit<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+              <a href="#" data-arrow-btn="" style="font-size:14px;font-weight:600;color:{{ sub.submitColor }};display:inline-flex;align-items:center;gap:5px;border:1px solid transparent;border-radius:5px;padding:6px 12px;margin:-6px -12px;transition:border-color .2s ease,color .2s ease" style-hover="background:#DB143E;border-color:#DB143E;color:#FFFFFF">Submit<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
             </div>
           </div>
         </sc-for>
+      </div>
+      <div data-m-only="" style="justify-content:center;align-items:center;gap:8px;margin-top:10px">
+        <button onClick="{{ carPrev.subs }}" aria-label="Previous" style="border:none;background:transparent;color:#0B0F1F;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid currentColor"></span><span style="width:10px;height:1px;background:currentColor"></span></button>
+        <div style="display:flex;gap:8px"><sc-for list="{{ dots.subs }}" as="d" hint-placeholder-count="3"><span style="width:7px;height:7px;border-radius:50%;background:{{ d.bg }};transition:background .2s ease"></span></sc-for></div>
+        <button onClick="{{ carNext.subs }}" aria-label="Next" style="border:none;background:transparent;color:#0B0F1F;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:10px;height:1px;background:currentColor"></span><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid currentColor"></span></button>
       </div>
     </div>
   </div>
 
   <!-- Supporting Partners -->
-  <div style="background:#02071D;color:#FFFFFF;padding:64px 48px">
+  <div data-m-sec="" data-m-partners="" style="background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.8)),url(partners-bg-2.png) center/cover no-repeat,#02071D;color:#FFFFFF;padding:64px 48px">
     <div style="max-width:1200px;margin:0 auto;text-align:center">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:32px">
+      <div data-m-head="" style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:32px">
         <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:24px;font-weight:700;margin:0">Supporting Partners &amp; Collaborating Societies</h2>
-        <a href="#" data-arrow-btn="" style="background:transparent;color:#FFFFFF;font-size:14px;font-weight:600;padding:0 21px;border-radius:5px;border:1px solid #FFFFFF;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#FFFFFF;color:#12295E">See All Partners<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+        <a href="#" data-arrow-btn="" style="background:transparent;color:#FFFFFF;font-size:14px;font-weight:600;padding:0 21px;border-radius:5px;border:1px solid #FFFFFF;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#FFFFFF;color:#01278C"><span data-m-hide="">See </span>All Partners<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
       </div>
       <div style="overflow:hidden;width:100%">
         <div style="display:flex;gap:16px;width:max-content;animation:om-marquee 22s linear infinite" style-hover="animation-play-state:paused">
@@ -428,23 +582,23 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
   <!-- Content & Media -->
-  <div style="background:#F5F6F8;padding:100px 48px">
+  <div data-m-sec="" style="background:#F5F6F8;padding:100px 48px">
     <div style="max-width:1200px;margin:0 auto">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:24px">
+      <div data-m-head="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:24px">
         <div>
-          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C93143;margin-bottom:12px">— Content &amp; Media</div>
+          <div data-m-eyebrow="" style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#DB143E;margin-bottom:12px">— Content &amp; Media</div>
           <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:34px;font-weight:700;margin:0">Lectures, Interviews &amp; Publications</h2>
         </div>
-        <a href="#" data-arrow-btn="" style="background:transparent;color:#12295E;font-size:13px;font-weight:700;padding:0 16px;border-radius:5px;border:1px solid #12295E;display:inline-flex;align-items:center;justify-content:center;gap:5px;line-height:1;height:33px;box-sizing:border-box" style-hover="background:#12295E;color:#FFFFFF">All Content<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+        <a href="#" data-arrow-btn="" style="background:transparent;color:#01278C;font-size:13px;font-weight:700;padding:0 16px;border-radius:5px;border:1px solid #01278C;display:inline-flex;align-items:center;justify-content:center;gap:5px;line-height:1;height:33px;box-sizing:border-box" style-hover="background:#01278C;color:#FFFFFF">All Content<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
       </div>
 
-      <div style="display:flex;gap:10px;margin-bottom:32px">
+      <div data-m-filters="" style="display:flex;gap:10px;margin-bottom:32px">
         <sc-for list="{{ mediaFilters }}" as="f" hint-placeholder-count="4">
           <button onClick="{{ f.onClick }}" style="border:1px solid {{ f.border }};background:{{ f.bg }};color:{{ f.color }};font-size:14px;font-weight:600;padding:0 20px;border-radius:100px;cursor:pointer;transition:opacity .15s ease;display:inline-flex;align-items:center;justify-content:center;height:33px;box-sizing:border-box" style-hover="opacity:.7">{{ f.label }}</button>
         </sc-for>
       </div>
 
-      <div ref="{{ mediaRef }}" data-hscroll="" style="display:flex;gap:24px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none">
+      <div ref="{{ mediaRef }}" data-hscroll="" data-m-car="" data-carousel="media" onScroll="{{ onCarouselScroll }}" style="display:flex;gap:24px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none">
         <sc-for list="{{ visibleMedia }}" as="m" hint-placeholder-count="3">
           <div onMouseEnter="{{ m.onEnter }}" onMouseLeave="{{ m.onLeave }}" style="{{ m.cardStyle }}">
             <div style="position:relative">
@@ -457,17 +611,22 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
               </sc-if>
             </div>
             <div style="padding:20px">
-              <div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#C93143;margin-bottom:10px">{{ m.kicker }}</div>
+              <div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#DB143E;margin-bottom:10px">{{ m.kicker }}</div>
               <div style="font-size:17px;font-weight:600;margin-bottom:10px;line-height:1.35">{{ m.title }}</div>
               <div style="font-size:13px;color:#5B6070">{{ m.meta }}</div>
             </div>
           </div>
         </sc-for>
       </div>
-      <div style="display:flex;justify-content:center;align-items:center;gap:24px;margin-top:24px">
+      <div data-m-only="" style="justify-content:center;align-items:center;gap:8px;margin-top:10px">
+        <button onClick="{{ carPrev.media }}" aria-label="Previous" style="border:none;background:transparent;color:#0B0F1F;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid currentColor"></span><span style="width:10px;height:1px;background:currentColor"></span></button>
+        <div style="display:flex;gap:8px"><sc-for list="{{ dots.media }}" as="d" hint-placeholder-count="3"><span style="width:7px;height:7px;border-radius:50%;background:{{ d.bg }};transition:background .2s ease"></span></sc-for></div>
+        <button onClick="{{ carNext.media }}" aria-label="Next" style="border:none;background:transparent;color:#0B0F1F;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:10px;height:1px;background:currentColor"></span><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid currentColor"></span></button>
+      </div>
+      <div data-m-hide="" style="display:flex;justify-content:center;align-items:center;gap:24px;margin-top:24px">
         <button onClick="{{ scrollLeftFn(mediaRef) }}" style="border:none;background:transparent;color:#0B0F1F;font-size:18px;cursor:pointer;padding:6px;display:inline-flex"><span data-carousel-arrow="" style="display:inline-flex;align-items:center"><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-right:5px solid currentColor"></span><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span></span></button>
         <div style="display:flex;gap:8px">
-          <span style="width:7px;height:7px;border-radius:50%;background:#C93143"></span>
+          <span style="width:7px;height:7px;border-radius:50%;background:#DB143E"></span>
           <span style="width:7px;height:7px;border-radius:50%;background:rgba(2,7,29,.2)"></span>
           <span style="width:7px;height:7px;border-radius:50%;background:rgba(2,7,29,.2)"></span>
         </div>
@@ -477,46 +636,51 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
   <!-- Gallery -->
-  <div style="background:#02071D;color:#FFFFFF;padding:100px 48px">
+  <div data-m-sec="" style="background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.8)),url(past-events-bg.png) center/cover no-repeat,#02071D;color:#FFFFFF;padding:100px 48px">
     <div style="max-width:1200px;margin:0 auto">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px">
+      <div data-m-head="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px">
         <div>
-          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C93143;margin-bottom:12px">— Gallery</div>
+          <div data-m-eyebrow="" style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#DB143E;margin-bottom:12px">— Gallery</div>
           <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:34px;font-weight:700;margin:0">Past Events</h2>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start">
+      <div data-m-car="" data-carousel="gal" onScroll="{{ onCarouselScroll }}" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start">
         <sc-for list="{{ gallerySlots }}" as="g" hint-placeholder-count="4">
           <a href="#" onMouseEnter="{{ g.onEnter }}" onMouseLeave="{{ g.onLeave }}" style="display:block;width:100%;aspect-ratio:4/3;perspective:1200px">
             <div style="{{ g.flipStyle }}">
               <div style="position:absolute;inset:0;backface-visibility:hidden">
-                <image-slot id="{{ g.id }}" src="{{ g.photo }}" fit="cover" style="width:100%;height:100%" shape="rounded" radius="8" placeholder="Gallery photo"></image-slot>
+                <img src="{{ g.photo }}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block">
               </div>
-              <div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateX(180deg);background:#0F1F44;border-radius:8px;padding:20px;display:flex;align-items:center;justify-content:center">
+              <div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateX(180deg);background:linear-gradient(rgba(0,0,0,.95),rgba(0,0,0,.95)),url(gallery-back-bg.png) right center/cover no-repeat,#0F1F44;border-radius:8px;padding:20px;display:flex;align-items:center;justify-content:center">
                 <p style="font-family:'IBM Plex Sans',sans-serif;font-weight:700;font-size:18px;letter-spacing:.02em;color:#FFFFFF;margin:0;text-align:center">{{ g.year }}</p>
               </div>
             </div>
           </a>
         </sc-for>
       </div>
+      <div data-m-only="" style="justify-content:center;align-items:center;gap:8px;margin-top:10px">
+        <button onClick="{{ carPrev.gal }}" aria-label="Previous" style="border:none;background:transparent;color:#FFFFFF;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid currentColor"></span><span style="width:10px;height:1px;background:currentColor"></span></button>
+        <div style="display:flex;gap:8px"><sc-for list="{{ dots.gal }}" as="d" hint-placeholder-count="3"><span style="width:7px;height:7px;border-radius:50%;background:{{ d.bg }};transition:background .2s ease"></span></sc-for></div>
+        <button onClick="{{ carNext.gal }}" aria-label="Next" style="border:none;background:transparent;color:#FFFFFF;cursor:pointer;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0"><span style="width:10px;height:1px;background:currentColor"></span><span style="width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid currentColor"></span></button>
+      </div>
     </div>
   </div>
 
   <!-- Sponsorship -->
-  <div style="padding:100px 48px">
+  <div data-m-sec="" style="padding:100px 48px">
     <div style="max-width:1200px;margin:0 auto">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
+      <div data-m-head="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
         <div>
-          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C93143;margin-bottom:12px">— Sponsorship</div>
+          <div data-m-eyebrow="" style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#DB143E;margin-bottom:12px">— Sponsorship</div>
           <h2 style="font-family:'IBM Plex Sans',sans-serif;font-size:34px;font-weight:700;margin:0">Sponsors &amp; Exhibitors</h2>
         </div>
-        <a href="#" data-arrow-btn="" style="background:transparent;color:#12295E;font-size:13px;font-weight:700;padding:0 16px;border-radius:5px;border:1px solid #12295E;display:inline-flex;align-items:center;justify-content:center;gap:5px;line-height:1;height:33px;box-sizing:border-box" style-hover="background:#12295E;color:#FFFFFF">All Sponsors<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
+        <a href="#" data-arrow-btn="" style="background:transparent;color:#01278C;font-size:13px;font-weight:700;padding:0 16px;border-radius:5px;border:1px solid #01278C;display:inline-flex;align-items:center;justify-content:center;gap:5px;line-height:1;height:33px;box-sizing:border-box" style-hover="background:#01278C;color:#FFFFFF">All Sponsors<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></a>
       </div>
       <div style="overflow:hidden;width:100%">
         <div style="display:flex;gap:16px;width:max-content;animation:om-marquee 22s linear infinite;will-change:transform" style-hover="animation-play-state:paused">
           <sc-for list="{{ sponsorSlotsLoop }}" as="s" hint-placeholder-count="10">
-            <div style="width:180px;height:76px;flex-shrink:0;border:1px dashed #C7CAD4;border-radius:6px;transition:border-color .15s ease" style-hover="border-color:#12295E">
-              <image-slot id="{{ s.id }}" src="{{ s.photo }}" fit="contain" style="width:100%;height:100%;background:#FFFFFF;pointer-events:none" shape="rect" radius="6" placeholder="Sponsor logo"></image-slot>
+            <div style="width:180px;height:76px;flex-shrink:0;border-radius:6px">
+              <img src="{{ s.photo }}" alt="" style="width:100%;height:100%;object-fit:contain;background:#FFFFFF;border-radius:6px;display:block;pointer-events:none">
             </div>
           </sc-for>
         </div>
@@ -525,27 +689,27 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
   <!-- Newsletter -->
-  <div style="background:#02071D;padding:80px 48px;text-align:center">
+  <div data-m-sec="" style="background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.8)),url(newsletter-bg.png) center/cover no-repeat,#02071D;padding:80px 48px;text-align:center">
     <div style="max-width:600px;margin:0 auto">
       <h2 style="font-family:'IBM Plex Sans',sans-serif;color:#FFFFFF;font-size:30px;font-weight:700;margin:0 0 10px">Stay Connected to ICI</h2>
       <p style="color:#C9CCD6;font-size:15px;margin:0 0 28px">Conference updates, preview lectures, and program changes delivered to your inbox.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
-        <input type="email" placeholder="Email address" style="background:#FFFFFF;border:none;padding:0 20px;border-radius:2px;font-size:15px;width:280px;height:33px;box-sizing:border-box">
-        <button data-arrow-btn="" style="background:#C93143;color:#FFFFFF;font-size:15px;font-weight:600;padding:0 28px;border-radius:2px;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#A32538">Subscribe Now<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></button>
+        <input type="email" data-m-full="" placeholder="Email address" style="background:#FFFFFF;border:none;padding:0 20px;border-radius:2px;font-size:15px;width:280px;height:33px;box-sizing:border-box">
+        <button data-arrow-btn="" data-m-full="" style="background:#DB143E;color:#FFFFFF;font-size:15px;font-weight:600;padding:0 28px;border-radius:2px;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px;height:33px;box-sizing:border-box" style-hover="background:#B01032">Subscribe Now<span data-arrow="" style="display:inline-flex;align-items:center;width:16px;flex-shrink:0"><span data-arrow-tail="" style="width:6px;height:1px;background:currentColor;transition:width .15s ease"></span><span style="width:0;height:0;flex-shrink:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:5px solid currentColor"></span></span></button>
       </div>
       <label style="display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:#C9CCD6;cursor:pointer">
-        <input type="checkbox" style="width:15px;height:15px;accent-color:#C93143;cursor:pointer">
+        <input type="checkbox" style="width:15px;height:15px;accent-color:#DB143E;cursor:pointer">
         I agree to the website's Privacy Policy
       </label>
     </div>
   </div>
 
   <!-- Footer -->
-  <div style="background:#02071D;color:#C9CCD6;padding:64px 48px 32px;border-top:2px solid #C93143">
+  <div data-m-sec="" data-m-footer="" style="background:#02071D;color:#C9CCD6;padding:64px 48px 32px;border-top:2px solid #DB143E">
     <div style="max-width:1200px;margin:0 auto">
-      <div style="display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:32px;margin-bottom:56px">
+      <div data-m-foot="" style="display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:32px;margin-bottom:56px">
         <div>
-          <img src="logo-white.svg" alt="ICI logo" style="height:57px;width:auto;margin-top:-9.5px;margin-bottom:10.5px">
+          <img data-m-footlogo="" src="logo-white.svg" alt="ICI logo" style="height:57px;width:auto;margin-top:-9.5px;margin-bottom:10.5px">
           <p style="font-size:14px;line-height:1.6;margin:0 0 16px;max-width:280px">Israel's leading cardiology and innovation conference. A platform for researchers, clinicians, and entrepreneurs.</p>
           <div style="font-size:14px;line-height:1.8;margin-bottom:16px">
             <div>David InterContinental, Tel Aviv</div>
@@ -571,7 +735,7 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
       </div>
       <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px">
         <div>© 2026 ICI - International Cardiology Innovation Conference. All rights reserved</div>
-        <div style="display:flex;align-items:center;gap:8px">
+        <div data-m-credit="" style="display:flex;align-items:center;gap:8px">
           <span>Created by</span>
           <img src="web3d-logo.png" alt="WEB3D" style="height:16px;width:auto">
         </div>
@@ -580,12 +744,13 @@ nav::-webkit-scrollbar{display:none;width:0;height:0}
   </div>
 
 </div>
+  </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;viewMode&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Desktop&quot;, &quot;Mobile&quot;], &quot;default&quot;: &quot;Desktop&quot;, &quot;tsType&quot;: &quot;'Desktop' | 'Mobile'&quot;}}">
 class Component extends DCLogic {
   navScrollRef = { current: null };
-  state = { bannerIndex: 0, activeAudience: 0, hoveredSignup: null, mediaTab: 'All', scrolled: false, showBellBar: false, showSocialRail: true, statsProgress: 0, statsStarted: false, navScrollLeft: 0, navScrollMax: 0, activeSubmenu: null, hoveredEvent: null, hoveredCard: null, hoveredSpeaker: null, hoveredSub: null, hoveredMedia: null, hoveredGallery: null, showSocialRail: false, scheduleDay: 'Dec 8, 2026' };
+  state = { mobileMenuOpen: false, mobileSubOpen: null, bannerIndex: 0, activeAudience: 0, hoveredSignup: null, mediaTab: 'All', scrolled: false, showBellBar: false, showSocialRail: true, statsProgress: 0, statsStarted: false, navScrollLeft: 0, navScrollMax: 0, activeSubmenu: null, hoveredEvent: null, hoveredCard: null, hoveredSpeaker: null, hoveredSub: null, hoveredMedia: null, hoveredGallery: null, showSocialRail: false, scheduleDay: 'Dec 8, 2026' };
 
   hoverSub(i, on) { return () => this.setState({ hoveredSub: on ? i : null }); }
   navItemHoverIn(i) {
@@ -649,10 +814,10 @@ class Component extends DCLogic {
     { label: 'COMPLEX', title: 'Complex Case Submission', copy: 'Share challenging cases and contribute to advancing cardiovascular care worldwide.' },
     { label: 'ABSTRACT', title: 'Abstract Submission', copy: 'Present your research to leading cardiology experts and get published in JACC.' },
   ];
-  bannerSlideSrcs = ['promoBanner1', 'promoBanner2', 'promoBanner3', 'promoBanner4'];
-  bannerAlts = ['Submit Abstract', 'Register Now', 'Complex Case Submission — Are Now Open', 'Startup Competition — Apply Now'];
-  bellBarMessages = ['Abstract Submission — Now Open!', 'Registration — Now Open!', 'Complex Case Submission — Now Open!', 'Startup Competition — Now Open!'];
-  bellBarIcons = ['iconBarDocument', 'iconPeople', 'iconHeart', 'iconShuttle'];
+  bannerSlideSrcs = ['partners-bg-2.png', 'partners-bg-2.png', 'banner-bg-3.png'];
+  bannerAlts = ['Abstract Submission — Now Open', 'Complex Case Submission — Now Open', 'Startup Competition — Apply Now'];
+  bellBarMessages = ['Abstract Submission — Now Open!', 'Complex Case Submission — Now Open!', 'Startup Competition — Now Open!'];
+  bellBarIcons = ['iconBarDocument', 'iconHeart', 'iconShuttle'];
 
   resourceFallbacks = {
     promoBanner1:'promo-banner-1.png', promoBanner2:'promo-banner-2.png', promoBanner3:'promo-banner-3.png', promoBanner4:'promo-banner-4.png',
@@ -671,12 +836,53 @@ class Component extends DCLogic {
   res(id, fallback) { const f = fallback || this.resourceFallbacks[id] || id; return (window.__resources && window.__resources[id]) || f; }
   _speakerResId(filename) { const map = { 'speaker-1.png':'speaker1','speaker-2.png':'speaker2','speaker-3.png':'speaker3','speaker-4.png':'speaker4', 'speaker-4-sm.png':'speaker4' }; return map[filename] || filename; }
   _mediaResId(filename) { const map = { 'media-1.png':'media1','media-2.png':'media2','media-3.png':'media3' }; return map[filename] || filename; }
+  toggleMobileMenu = () => {
+    const btn = document.querySelector('[data-m-burger]');
+    const top = btn ? Math.round(btn.getBoundingClientRect().top) : 10;
+    this.setState(s => ({ mobileMenuOpen: !s.mobileMenuOpen, mobileSubOpen: null, closeBtnTop: top + 'px' }));
+  };
+  toggleMobileSub(i) { return () => this.setState(s => ({ mobileSubOpen: s.mobileSubOpen === i ? null : i })); }
+  measureWhyBg = () => {
+    const el = document.getElementById('why-ici-wrap');
+    if (!el || this.state.hoveredEvent !== null) return;
+    const w = el.clientWidth, h = el.clientHeight + 160;
+    const size = Math.round(h) + 'px';
+    if (size !== this.state.whyBgHeight) this.setState({ whyBgHeight: size });
+  };
+  carDark = { ev: true, sp: true, gal: true };
+  measureCarousels = () => {
+    const counts = {};
+    document.querySelectorAll('[data-carousel]').forEach(el => { counts[el.dataset.carousel] = el.children.length; });
+    const prev = this.state.carCounts || {};
+    if (Object.keys(counts).some(k => counts[k] !== prev[k])) this.setState({ carCounts: counts });
+  };
+  onCarouselScroll = (e) => {
+    const el = e.currentTarget, key = el.dataset.carousel, first = el.children[0];
+    if (!first) return;
+    const step = first.getBoundingClientRect().width + (parseFloat(getComputedStyle(el).columnGap) || 0);
+    const max = el.children.length - 1;
+    const idx = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4 ? max : Math.min(max, Math.round(el.scrollLeft / step));
+    if ((this.state.carIdx || {})[key] !== idx) this.setState(s => ({ carIdx: { ...(s.carIdx || {}), [key]: idx } }));
+  };
+  componentDidUpdate() { this.measureCarousels(); }
+  carStep(key, dir) {
+    return () => {
+      const el = document.querySelector('[data-carousel="' + key + '"]');
+      if (!el || !el.children[0]) return;
+      const step = el.children[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(el).columnGap) || 0);
+      el.scrollBy({ left: dir * step, behavior: 'smooth' });
+    };
+  }
   componentDidMount() {
+    setTimeout(this.measureCarousels, 200);
+    setTimeout(this.measureWhyBg, 150);
+    window.addEventListener('resize', this.measureWhyBg);
     setTimeout(() => this.onNavScroll(), 100);
     window.addEventListener('resize', this.onNavScroll);
     this._bannerInterval = setInterval(() => {
       this.setState(s => ({ bannerIndex: (s.bannerIndex + 1) % this.bannerSlideSrcs.length }));
     }, 4000);
+    document.querySelectorAll('video[src="why-ici-bg.mp4"]').forEach(w => { w.muted = true; w.loop = true; w.addEventListener('ended', () => { w.currentTime = 0; w.play().catch(() => {}); }); w.play().catch(() => {}); document.addEventListener('click', () => w.play().catch(() => {}), { once: true }); });
     const v = document.querySelector('video[src="hero-video.mp4"]');
     if (v) {
       v.muted = true;
@@ -694,8 +900,7 @@ class Component extends DCLogic {
         const bottom = banner.getBoundingClientRect().bottom;
         const past = bottom <= 0;
         if (past !== this.state.showBellBar) this.setState({ showBellBar: past });
-        const railOk = window.scrollY >= window.innerHeight * 0.5;
-        if (railOk !== this.state.showSocialRail) this.setState({ showSocialRail: railOk });
+        
       }
       if (!this.state.statsStarted && this.statsRef.current) {
         const r = this.statsRef.current.getBoundingClientRect();
@@ -831,8 +1036,8 @@ class Component extends DCLogic {
   scrollRightFn(ref) { return () => { if (ref.current) ref.current.scrollBy({ left: 300, behavior: 'smooth' }); }; }
 
   setMediaTab(tab) { return () => this.setState({ mediaTab: tab }); }
-  mediaTabBg(tab) { return this.state.mediaTab === tab ? '#C93143' : 'transparent'; }
-  mediaTabBorder(tab) { return this.state.mediaTab === tab ? '#C93143' : '#E4E5EA'; }
+  mediaTabBg(tab) { return this.state.mediaTab === tab ? '#DB143E' : 'transparent'; }
+  mediaTabBorder(tab) { return this.state.mediaTab === tab ? '#DB143E' : '#E4E5EA'; }
   mediaTabColor(tab) { return this.state.mediaTab === tab ? '#FFFFFF' : '#0B0F1F'; }
 
   renderVals() {
@@ -849,9 +1054,9 @@ class Component extends DCLogic {
       signupTabs: this.signupData.map((s, i) => {
         const open = this.state.hoveredSignup === i;
         return {
-          ...s, bg: open ? 'rgba(2,7,29,.97)' : 'rgba(2,7,29,.6)',
-          labelColor: open ? '#C93143' : '#FFFFFF',
-          panelWidth: open ? '230px' : '0px', panelOpacity: open ? '1' : '0', panelPadRight: open ? '18px' : '0px',
+          ...s, bg: open ? '#01278C' : 'rgba(2,7,29,.6)',
+          labelColor: '#FFFFFF',
+          panelOpacity: open ? '1' : '0', panelPointer: open ? 'auto' : 'none', panelShift: open ? '0px' : '-6px',
           onEnter: this.hoverSignup(i, true), onLeave: this.hoverSignup(i, false),
         };
       }),
@@ -861,9 +1066,9 @@ class Component extends DCLogic {
       })),
       bellBarMessage: this.bellBarMessages[this.state.bannerIndex] || this.bellBarMessages[0],
       bellBarIcon: this.res(this.bellBarIcons[this.state.bannerIndex] || this.bellBarIcons[0]),
-      bannerSlides: this.bannerSlideSrcs.map((id, i) => ({
-        src: this.res(id || this.bannerSlideSrcs[0]), alt: this.bannerAlts[i],
-        style: 'position:' + (i === 0 ? 'relative' : 'absolute') + ';top:0;left:0;width:100%;display:block;transform:translateX(' + ((i - this.state.bannerIndex) * 100) + '%);transition:transform .6s ease',
+      bannerSlides: this.bannerSlideSrcs.map((src, i) => ({
+        kicker: 'BANNER #' + (i + 1), title: this.bannerAlts[i],
+        style: 'position:' + (i === 0 ? 'relative' : 'absolute') + ';top:0;left:0;width:100%;aspect-ratio:2172/330;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(' + src + ') center/cover no-repeat,#02071D;transform:translateX(' + ((i - this.state.bannerIndex) * 100) + '%);transition:transform .6s ease',
       })),
       statsRef: this.statsRef,
       stats: this.statsDisplay(),
@@ -873,7 +1078,7 @@ class Component extends DCLogic {
           ...ev,
           expanded: hovered,
           symbol: hovered ? '−' : '+',
-          cardStyle: 'background:#0F1F44;border-top:3px solid #C93143;border-radius:6px;padding:26px;cursor:default;transform-origin:bottom center;transition:transform .4s ease;transform:' + (hovered ? 'scale(1.03)' : 'scale(1)'),
+          cardStyle: 'background:#0F1F44;border-top:3px solid #DB143E;border-radius:6px;padding:26px;cursor:default;transform-origin:bottom center;transition:transform .4s ease;transform:' + (hovered ? 'scale(1.03)' : 'scale(1)'),
           descStyle: 'overflow:hidden;font-family:\'Inter\',sans-serif;font-weight:300;font-size:13px;line-height:1.7;color:#C9CCD6;transition:max-height .4s ease,opacity .4s ease,margin-top .4s ease,padding-top .4s ease;max-height:' + (hovered ? '110px' : '0px') + ';opacity:' + (hovered ? 1 : 0) + ';margin-top:' + (hovered ? '16px' : '0px') + ';padding-top:' + (hovered ? '16px' : '0px') + ';border-top:1px solid ' + (hovered ? 'rgba(255,255,255,.12)' : 'transparent'),
           onEnter: this.hoverEvent(i, true),
           onLeave: this.hoverEvent(i, false),
@@ -881,8 +1086,28 @@ class Component extends DCLogic {
       }),
       headerLogoHeight: this.state.scrolled ? '44px' : '69px',
       headerPadY: this.state.scrolled ? '6px' : '10px',
-      navFontSize: this.state.scrolled ? '11.5px' : '13px',
+      navFontSize: this.state.scrolled ? '13.5px' : '15px',
       promoBarTop: this.state.scrolled ? '58px' : '84px',
+      whyBgHeight: this.state.whyBgHeight || '100%',
+      mobileMenuOpen: this.state.mobileMenuOpen,
+      onCarouselScroll: this.onCarouselScroll,
+      carPrev: ['ev','sch','sp','subs','media','gal'].reduce((o, k) => (o[k] = this.carStep(k, -1), o), {}),
+      carNext: ['ev','sch','sp','subs','media','gal'].reduce((o, k) => (o[k] = this.carStep(k, 1), o), {}),
+      dots: ['ev','sch','sp','subs','media','gal'].reduce((o, k) => {
+        const n = (this.state.carCounts || {})[k] || 3, cur = (this.state.carIdx || {})[k] || 0;
+        o[k] = Array.from({ length: n }, (_, i) => ({ bg: i === cur ? '#DB143E' : (this.carDark[k] ? 'rgba(255,255,255,.3)' : 'rgba(2,7,29,.2)') }));
+        return o;
+      }, {}),
+      closeBtnTop: this.state.closeBtnTop || '10px',
+      toggleMobileMenu: this.toggleMobileMenu,
+      burgerTop: this.state.mobileMenuOpen ? 'translateY(7px) rotate(45deg)' : 'none',
+      burgerBottom: this.state.mobileMenuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
+      burgerMidOpacity: this.state.mobileMenuOpen ? 0 : 1,
+      mobileNav: this.navLinks.map((item, i) => {
+        const open = this.state.mobileSubOpen === i;
+        return { label: item.label, sub: item.sub, hasSub: item.sub && item.sub.length > 0, open: open && item.sub && item.sub.length > 0, caretRotate: open ? 'rotate(180deg)' : 'none', onToggle: this.toggleMobileSub(i) };
+      }),
+      isMobilePreview: (this.props.viewMode ?? 'Desktop') === 'Mobile' && !/[?&]frame=1/.test(window.location.search),
       navLinks: this.navLinks.map((item, i) => ({ ...item, onHoverIn: this.navItemHoverIn(i), onHoverOut: this.navItemHoverOut() })),
       navScrollRef: this.navScrollRef,
       onNavScroll: this.onNavScroll,
@@ -894,12 +1119,12 @@ class Component extends DCLogic {
       activeSubmenuItems: this.state.activeSubmenu != null ? this.navLinks[this.state.activeSubmenu].sub : [],
       activeSubmenuLeft: this.state.activeSubmenuRect ? Math.round(this.state.activeSubmenuRect.left + this.state.activeSubmenuRect.width / 2) : -9999,
       activeSubmenuTop: this.state.activeSubmenuRect ? Math.round(this.state.activeSubmenuRect.bottom + 8) : -9999,
-      submissionPills: this.submissionPills,
+      submissionPills: this.submissionPills.map(s => { const i = s.indexOf(' '); return { l1: s.slice(0, i), l2: s.slice(i + 1) }; }),
       infoStripe: this.infoStripe,
       scheduleDayTabs: this.scheduleDays.map(d => ({
         label: d.label, date: d.date,
-        border: this.state.scheduleDay === d.date ? '#12295E' : 'rgba(2,7,29,.15)',
-        bg: this.state.scheduleDay === d.date ? '#12295E' : 'transparent',
+        border: this.state.scheduleDay === d.date ? '#01278C' : 'rgba(2,7,29,.15)',
+        bg: this.state.scheduleDay === d.date ? '#01278C' : 'transparent',
         color: this.state.scheduleDay === d.date ? '#FFFFFF' : '#0B0F1F',
         onClick: this.selectScheduleDay(d.date),
       })),
@@ -921,7 +1146,7 @@ class Component extends DCLogic {
         return {
           ...sp,
           flipStyle: 'position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;transform:' + (flipped ? 'rotateX(180deg)' : 'rotateX(0)'),
-          profileStyle: 'border:1px solid rgba(255,255,255,.3);color:#FFFFFF;font-size:13px;font-weight:600;padding:0 18px;border-radius:5px;display:flex;align-items:center;justify-content:center;height:33px;box-sizing:border-box;transition:background .2s ease,color .2s ease;' + (flipped ? 'background:#FFFFFF;color:#12295E;border-color:#FFFFFF' : ''),
+          profileStyle: 'border:1px solid rgba(255,255,255,.3);color:#FFFFFF;font-size:13px;font-weight:600;padding:0 18px;border-radius:5px;display:flex;align-items:center;justify-content:center;height:33px;box-sizing:border-box;transition:background .2s ease,color .2s ease;' + (flipped ? 'background:#FFFFFF;color:#01278C;border-color:#FFFFFF' : ''),
           onEnter: this.hoverSpeaker(i, true),
           onLeave: this.hoverSpeaker(i, false),
         };
@@ -931,7 +1156,7 @@ class Component extends DCLogic {
         return {
           ...s,
           cardStyle: 'background:' + (hovered ? '#02071D' : '#FFFFFF') + ';color:' + (hovered ? '#FFFFFF' : '#0B0F1F') + ';border-radius:8px;padding:28px;box-shadow:' + (hovered ? '0 12px 28px rgba(2,7,29,.25)' : '0 2px 10px rgba(2,7,29,.06)') + ';transition:background .25s ease,color .25s ease,box-shadow .25s ease',
-          deadlineColor: hovered ? '#C9CCD6' : '#C93143',
+          deadlineColor: hovered ? '#C9CCD6' : '#DB143E',
           submitColor: hovered ? '#FFFFFF' : '#0B0F1F',
           onEnter: this.hoverSub(i, true),
           onLeave: this.hoverSub(i, false),
@@ -941,8 +1166,8 @@ class Component extends DCLogic {
       partnerSlotsLoop: (() => { const rp = this.partnerSlots.map(p => ({ ...p, photo: this.res(p.id.replace('partner-','partner'), p.photo) })); return rp.concat(rp.map(p => ({ ...p, id: p.id + '-b' }))); })(),
       mediaFilters: this.mediaFilters.map(f => ({
         label: f,
-        bg: this.state.mediaTab === f ? '#C93143' : 'transparent',
-        border: this.state.mediaTab === f ? '#C93143' : '#E4E5EA',
+        bg: this.state.mediaTab === f ? '#DB143E' : 'transparent',
+        border: this.state.mediaTab === f ? '#DB143E' : '#E4E5EA',
         color: this.state.mediaTab === f ? '#FFFFFF' : '#0B0F1F',
         onClick: this.setMediaTab(f),
       })),
